@@ -18,7 +18,7 @@ md.retorna_dados()
 
 Se tipo for igual a 'retornar', use uma variavel para receber a lista com os dados meteorologicos.
 
-lista = retorna_dados()
+lista = md.retorna_dados()
 </code></pre>
 
 

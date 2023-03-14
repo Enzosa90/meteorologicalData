@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='meteorologicalData',
-    version='0.1.1',
+    version='0.1.2',
     license='MIT License',
     author='David Moura, Enzo Sá',
     long_description=readme,
