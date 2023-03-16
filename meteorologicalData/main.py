@@ -6,6 +6,11 @@ import sys
 
 class Ui_MainWindow(object):
 
+    """
+    Uma classe que irá criar uma tela para mostrar os dados meteorologicos
+
+    """
+
     lista = []
 
     def setupUi(self, MainWindow):
@@ -190,6 +195,38 @@ class Ui_MainWindow(object):
         sys.exit(app.exec_())
 
 class MD():
+    """
+    Uma classe que faz solicitação para a API do OpenWeatherMap para obter informações climáticas de uma determinada cidade.
+    ...
+    Attributes 
+    -----------
+    cidade : str
+        Recebe o nome da cidade.
+    tipo : str
+        Recebe o tipo de retorno.
+    
+    Constructor
+    ------------
+    Parameteres
+    ------------
+    cidade : str
+        Recebe o nome da cidade.
+    tipo : str
+        Recebe o tipo de retorno.
+
+    Methods
+    --------
+    def retorna_dados(self):
+        A função recebe a cidade como parâmetro de entrada, e o tipo de retorno(visualizar ou retornar).
+        O primeiro passo é definir a chave de API para acessar a API do OpenWeatherMap. 
+        Em seguida, é criado um link para a solicitação da API, usando a cidade passada como parâmetro e a chave de API.
+        Finalmente, é feita uma solicitação GET usando a biblioteca requests, e a resposta da solicitação é armazenada na variável requisicao. 
+        Depois disso, a função pode continuar a extrair os dados da resposta da API, dependendo do que é necessário para a aplicação.
+        Se o usuário solicitar a visualização, será criado um mapa com a localização exata da cidade no mapa, e será mostrada uma tela contendo 
+        os dados meteorológicos da cidade informada. Já se o usuário solicitar o retorno, será retornado os dados meteorológicos em uma lista.
+
+    """
+
 
     def __init__(self, cidade, tipo):
         self._cidade = cidade
